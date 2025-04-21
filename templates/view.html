@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Records</title>
+</head>
+<body>
+    <h1>Patient List</h1>
+    <table border="1">
+        <tr><th>ID</th><th>Name</th><th>Age</th><th>Disease</th><th>Action</th></tr>
+        {% for p in patients %}
+        <tr>
+            <td>{{ p[0] }}</td>
+            <td>{{ p[1] }}</td>
+            <td>{{ p[2] }}</td>
+            <td>{{ p[3] }}</td>
+            <td><a href="/delete/{{ p[0] }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
